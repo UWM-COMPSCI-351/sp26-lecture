@@ -5,20 +5,36 @@ import java.util.Iterator;
 
 public class RangeCollection extends AbstractCollection<Integer> {
 
+	private final int lo, hi;
+	
 	public RangeCollection(int lo, int hi) {
-		// TODO Auto-generated constructor stub
+		this.lo = lo;
+		this.hi = hi;
 	}
 
-	@Override
+	@Override // required
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return hi-lo;
 	}
 
-	@Override
+	@Override // required
 	public Iterator<Integer> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+		return new MyIterator();
 	}
 
+	private class MyIterator implements Iterator<Integer> {
+
+		@Override // required
+		public boolean hasNext() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override // required
+		public Integer next() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		
+	}
 }
