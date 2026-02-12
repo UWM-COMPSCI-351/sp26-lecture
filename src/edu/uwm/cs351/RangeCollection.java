@@ -24,16 +24,16 @@ public class RangeCollection extends AbstractCollection<Integer> {
 
 	private class MyIterator implements Iterator<Integer> {
 
+		int current = 0;
+		
 		@Override // required
 		public boolean hasNext() {
-			// TODO Auto-generated method stub
-			return false;
+			return current+1 < hi;
 		}
 
 		@Override // required
 		public Integer next() {
-			// TODO Auto-generated method stub
-			return null;
+			return current+1;
 		}
 		
 	}
