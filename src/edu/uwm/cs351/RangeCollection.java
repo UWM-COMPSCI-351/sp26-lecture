@@ -33,7 +33,7 @@ public class RangeCollection extends AbstractCollection<Integer> {
 
 		@Override // required
 		public Integer next() {
-			return current+1;
+			return current = current+1;
 		}
 		
 	}
